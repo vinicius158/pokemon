@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+</head>
+
+<style>
+    .header {
+        padding: 3px;
+        text-align: center;
+        background-image: linear-gradient(#4169E1, #00BFFF);
+        margin:-10px;
+        height:220px;
+    }   
+
+    h1 { 
+
+    font-size:150px;
+    margin-top:30px;
+    color:yellow;
+    -webkit-text-stroke-width: 3px; 
+    -webkit-text-stroke-color: #000;
+
+    }  
+    
+    .foto {
+
+     height:180px; 
+     width:180px;
+     margin-right:1200px;
+     margin-top:-800px;
+
+    }    
+
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+  background-color:white;
+}   
+
+td, th:hover {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+ 
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.foto2 {
+
+height:150px; 
+width:150px;
+
+
+}
+   
+</style>
+
+<body>   
+
+
+    <div class="header">
+
+        <h1>Pokedex</h1>
+
+       
+    </div>
+
+    <img src = "https://img.pngio.com/pokemon-png-image-purepng-free-transparent-cc0-png-image-library-png-of-pokemon-1191_1254.png" class = "foto">
+  <br>
+  <br> 
+  <br>
+  <br>
+  <br> 
+  <br>
+  <body Bgcolor = "#008000"></body>
+
+  <table>
+    <tr>
+        <th>Foto</th>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Próxima evolução</th>
+      </tr>
+      <tr> <!---Foram colocados Ids para cada elemento da tabela que será puxado pelo DOM através do Java Script manipulando os elementos-->
+        <td><img src = "https://cdn1.newsplex.pt/fotos/2017/12/9/615919.jpg?type=Artigo" class = "foto2"></td>
+        <td><h4 id = "nome"></h4></td>
+        <td><h4 id = "tipo"></h4></td>
+        <td><h4 id = "evoluido"></h4></td>
+      </tr>
+      <tr>
+        <td><img src = " https://i.pinimg.com/originals/7a/f6/0b/7af60b2b6fa202db54f0aa275fee6e17.png" class = "foto2"></td>
+        <td><h4 id = "nome2"></h4></td>
+        <td><h4 id = "tipo2"></h4></td>
+        <td><h4 id = "evoluido2"></h4></h4></td>
+      </tr>
+      <tr>
+        <td><img src = "https://cdn.bulbagarden.net/upload/5/55/016Pidgey.png" class = "foto2"></td>
+        <td><h4 id = "nome3"></h4></td>
+        <td><h4 id = "tipo3"></h4></td>
+        <td><h4 id = "evoluido3"></h4></td>
+      </tr>
+
+      
+
+      
+  </table> 
+
+
+  <script> 
+
+  /*Aqui foi criada uma matriz com suas linhas determinadas por índice e colunas por nome dos atributos de cada pokemón*/
+
+    var pokemon = [
+   
+         
+        {'nome':'Pikachu','tipo':'Elétrico','evoluido':'Raichu'},
+        {'nome':'Charmander','tipo':'Fogo','evoluido':'Charizard'},  
+        {'nome':'Pidgey','tipo':'Vento','evoluido':'Pidgeoto'},  
+        
+        
+                   ]
+   
+    /*Nesse trecho ocorre função que pega os elementos através do id usando o nome da coluna e seu índice da linha   
+    como se trata de um ciclo que se repete várias vezes, em casos de maior fluxo de informações seria melhor uma estrutura de repetição 
+    para listar todos os dados
+    
+    
+    */
+
+
+    var nome  = document.getElementById("nome").innerHTML = pokemon[0].nome;  
+
+    var nome2 =  document.getElementById("nome2").innerHTML = pokemon[1].nome; 
+
+    var nome3 = document.getElementById("nome3").innerHTML = pokemon[2].nome;   
+
+    var tipo  = document.getElementById("tipo").innerHTML = pokemon[0].tipo;  
+
+    var tipo2 =  document.getElementById("tipo2").innerHTML = pokemon[1].tipo; 
+
+    var tipo3 = document.getElementById("tipo3").innerHTML = pokemon[2].tipo; 
+    
+    var evoluido  = document.getElementById("evoluido").innerHTML = pokemon[0].evoluido;  
+
+    var evoluido2 =  document.getElementById("evoluido2").innerHTML = pokemon[1].evoluido; 
+
+    var evoluido3 = document.getElementById("evoluido3").innerHTML = pokemon[2].evoluido;   
+
+    
+
+   
+</script>   
+
+<br> 
+<br> 
+<br> 
+<br>
+
+
+
+
+</body>
+
+</html>
